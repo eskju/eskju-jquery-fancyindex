@@ -1,0 +1,36 @@
+{
+    "name": "fancyindex",
+    "title": "esKju's FancyIndex Plugin",
+    "description": "Nowadays almost every fresh page looks the (s)hame: One page, very content, much scroll. So even though you really hate usability, enhance your design patters by using customer-orientated plugins like this.",
+    "keywords": [
+        "index",
+        "directory",
+        "contents",
+        "table"
+    ],
+    "version": "1.0.2",
+    "author": {
+        "name": "Chris Witte",
+        "url": "https://www.facebook.com/chris.witte.design"
+    },
+    "maintainers": [
+        {
+            "name": "Chris Witte",
+            "email": "jquery@cwdesigns.de",
+            "url": "http://www.cwdesigns.de"
+        }
+    ],
+    "licenses": [
+        {
+            "type": "MIT",
+            "url": "https://github.com/eskju/eskju-jquery-fancyindex/blob/master/LICENSE"
+        }
+    ],
+    "bugs": "https://github.com/eskju/eskju-jquery-fancyindex/issues",
+    "homepage": "http://www.cwdesigns.de/eskju-jquery-fancyindex.html",
+    "docs": "http://www.cwdesigns.de/eskju-jquery-fancyindex.html",
+    "download": "https://github.com/eskju/eskju-jquery-fancyindex",
+    "dependencies": {
+        "jquery": ">=1.5"
+    }
+}
