@@ -4,9 +4,9 @@
  * Copyright (c) 2014 Christian Witte
  * licensed under MIT license.
  *
- * https://github.com/eskju/eskju-jquery-fancyindex
+ * https://github.com/...
  *
- * Version: 1.0
+ * Version: 1.0.3
  * 
  * Licensed under MIT license.
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software 
@@ -23,6 +23,11 @@
  * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
  * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
+
+	$( document ).ready( function()
+	{
+		$( "body" ).FancyIndex();
+	});
 
 	$.fn.FancyIndex = function( options )
 	{
@@ -55,6 +60,7 @@
 				scrollToDuration: 1000,
 				scrollOnClick: true,
 				maxPrioritizedItems: 3,
+				flipPosition: false
 			}, options );
 			
 			this.loadHierarchy();
@@ -195,7 +201,7 @@
 			var $this = this;
 			this.items = [];
 			
-			esKjuFancyIndex = $( "<ul>" ).attr( "id", "esKju-fancyIndex" );
+			esKjuFancyIndex = $( "<ul>" ).attr( "id", "esKju-fancyIndex" ).addClass( ( this.options.flipPosition ? "left" : "right" ) );
 			$( "body" ).append( esKjuFancyIndex );
 			
 			$( this.selector.find( "h1,h2,h3,h4,h5,h6,h7" ) ).each( function( key, obj )

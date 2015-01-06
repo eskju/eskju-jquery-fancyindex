@@ -73,8 +73,9 @@ $( document ).ready( function( )
 } );
 ```
 
-| hideWhenInactive | boolean | true | Hide index if unwanted |
+| Option | Type | Default | Description |
 |---------------------|---------|-------|---------------------------------------------------|
+| hideWhenInactive | boolean | true | Hide index if unwanted |
 | focusInitally | boolean | true | Focus index on load |
 | focusOnResize | boolean | true | Focus index on window resize |
 | focusOnScroll | boolean | true | Focus index on scroll |
@@ -85,6 +86,7 @@ $( document ).ready( function( )
 | scrollOnClick | boolean | true | Scroll to desired section once clicked |
 | scrollToDuration | int | 1000 | Scroll duration |
 | maxPrioritizedItems | int | 3 | Number of prioritized items (important for CSS) |
+| flipPosition | boolean | false | Pulls index to left screen border |
 
 
 ## Author & Help
