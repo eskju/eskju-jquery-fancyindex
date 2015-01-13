@@ -6,7 +6,7 @@
  *
  * https://github.com/...
  *
- * Version: 1.0.3
+ * Version: 1.0.4
  * 
  * Licensed under MIT license.
  * Permission is hereby granted, free of charge, to any person obtaining a copy of this software 
@@ -206,24 +206,33 @@
 			
 			$( this.selector.find( "h1,h2,h3,h4,h5,h6,h7" ) ).each( function( key, obj )
 			{
-				var tag = $( obj ).prop( "tagName" ).toLowerCase();
-				var content = $( obj ).html();
-				var offset = $( obj ).offset();
-				var item = $( "<li>" ).addClass( tag ).html( "<div>" + content + "</div>" );
-				esKjuFancyIndex.append( item );
-				
-				$this.items.push({ 
-					offset: offset, 
-					obj: item 
-				}); 
-				
-				if( $this.options.scrollOnClick )
+				if( $( obj ).attr( "data-fancyindex-hide" ) != "true" )
 				{
-					$( item ).find( "div" ).click( function( )
+					var tag = $( obj ).prop( "tagName" ).toLowerCase();
+					var content = $( obj ).html();
+					var offset = $( obj ).offset();
+					
+					if( $( obj ).attr( "data-fancyIndex-title" ) && $( obj ).attr( "data-fancyIndex-title" ) != "" )
 					{
-						offset = $( obj ).offset();
-						$( "html, body" ).animate({ scrollTop: offset.top }, parseInt( $this.options.scrollToDuration ) );
-					});
+						content = $( obj ).attr( "data-fancyIndex-title" );
+					}
+					
+					var item = $( "<li>" ).addClass( tag ).html( "<div>" + content + "</div>" );
+					esKjuFancyIndex.append( item );
+					
+					$this.items.push({ 
+						offset: offset, 
+						obj: item 
+					}); 
+					
+					if( $this.options.scrollOnClick )
+					{
+						$( item ).find( "div" ).click( function( )
+						{
+							offset = $( obj ).offset();
+							$( "html, body" ).animate({ scrollTop: offset.top }, parseInt( $this.options.scrollToDuration ) );
+						});
+					}
 				}
 			});
 		}

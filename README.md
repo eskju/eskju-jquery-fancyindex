@@ -88,6 +88,15 @@ $( document ).ready( function( )
 | maxPrioritizedItems | int | 3 | Number of prioritized items (important for CSS) |
 | flipPosition | boolean | false | Pulls index to left screen border |
 
+## HTML Attributes
+
+Customize single HTML objects
+
+| Option | Type | Default | Description |
+|---------------------|---------|-------|---------------------------------------------------|
+| data-fancyindex-hide | boolean | false | Hide this HTML item in index |
+| data-fancyindex-title | string | | Custom title in index (use HTML content if empty) |
+
 
 ## Author & Help
 
